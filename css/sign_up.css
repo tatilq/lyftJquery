@@ -14,10 +14,15 @@ header p
 {
 	padding: 10px 20px 10px 10px;
 }
+#imgPais
+{
+	width: 200%;
+}
 #numero
 {
 	padding: 20px;
 }
+
 section .btn_log
 {
 	width: 100%;
@@ -26,6 +31,7 @@ section .btn_log
 	color: white;
 	border:none;
 	border-radius: 5px;
+	font-size: 30px;
 }
 section a
 {

@@ -11,7 +11,7 @@
 	<link rel="shortcut icon" href="ico_lyft.ico">
 	<title>Lyft</title>
 </head>
-<body onload="init()">
+<body>
 <!--******************************************PARTE DEL HEADER COMUN**************************************-->
 	<header>
 		<div class="container">
@@ -20,7 +20,7 @@
 				    <h1>Select Country</h1>
 		        </div>
 		        <div class="col-xs-2 col-sm-2 col-md-2">
-		        	<a href="sign-up.html"  style="text-decoration: none;"class="btn_default">Close</a>
+		        	<a href="sign-up.html"  style="text-decoration: none;" class="btn_default">Close</a>
 		        </div>
 				
 	      	</div>
@@ -33,7 +33,7 @@
 				<div class=" col-md-12 ">
 					<div class="input-group">
 			          	<span class="input-group-addon" id="iconSearch"><i class="fa fa-search" aria-hidden="true"></i></span>
-			          	<input name="email" id="search" autofocus typse="text" required class="form-control" placeholder="Email" onkeyup="searchChat()">
+			          	<input name="email" id="search" autofocus typse="text" onkeyup="searchChat()" required class="form-control" placeholder="Email" >
 				    </div>
 				</div>
 			</div>
@@ -48,6 +48,8 @@
 		</div>
 	</section>
 <!--******************************************************FIN******************************************-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/country.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
 </body>
 </html>

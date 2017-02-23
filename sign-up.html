@@ -11,7 +11,7 @@
 	<link rel="shortcut icon" href="ico_lyft.ico">
 	<title>lift</title>
 </head>
-<body onload="init()">
+<body >
 <!--******************************************PARTE DEL HEADER COMUN*******************************************-->
 	<header>
 		<div class="container ">
@@ -27,7 +27,6 @@
 	      	</div>
 	    </div>
 	</header>
-	<i class="fa fa-newspaper-o" aria-hidden="true"></i>
 <!--*********************************************PARTE DEL PAIS Y EL TELEFONO*************************************-->
 	<section class="postal codigo_postal">
 		<div class="container">
@@ -35,10 +34,10 @@
 	            <div class="col-md-offset-1 col-md-10 ">     
 	                <div class="input-group">
 	                    <div class="input-group-btn">
-	                        <a type="button" class="btn btn-default" aria-expanded="false" id="btn_pais" href="country.html"><img src="#" style="width: 200%; " id="imgPais" alt=""><span class="caret"></span></a>
+	                        <a type="button" class="btn btn-default" aria-expanded="false" id="btn_pais" href="country.html"><img src="img/peru.png"  id="imgPais" alt=""><span class="caret"></span></a>
 	                    </div>
-	                    <span class="input-X-addon" id="code" ></span>
-	                    <input type="text" id="numero"  class="form-control" aria-label="..." placeholder="123456789" onkeydown="checkInput_nombre(event)" onkeyup="validaLongitud()">
+	                    <span class="input-group-addon" id="code" >+51</span>
+	                    <input type="text" id="numero"  class="form-control" aria-label="..." placeholder="123456789" >
 	                </div>
 	                <div  id="salida" class="text-center"></div>
 	                <br>   
@@ -52,12 +51,13 @@
 		<div class="container">
 			<div class="row  ">
 		        <div class="col-xs-12 col-sm-12 col-md-12 text-center ">
-					<a style="text-decoration: none;" id="ref" href="#"><button  class="btn_log" onclick="generaRandom()" id="btn_log">Next</button></a>
+					<button  class="btn_log" id="btn_log">Next</button>
 				</div>
 			</div>
 		</div>
 	</section>
 <!--***********************************************FIN******************************************************-->
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/sign-up.js" type="text/javascript"></script>
 </body>
 </html>
