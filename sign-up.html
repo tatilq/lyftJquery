@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/sign_up.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
+	<link rel="shortcut icon" href="ico_lyft.ico">
+	<title>lift</title>
+</head>
+<body onload="init()">
+<!--******************************************PARTE DEL HEADER COMUN*******************************************-->
+	<header>
+		<div class="container ">
+	  		<div class="row  ">
+				<div class="col-xs-1 col-sm-1 col-md-1 anterior">
+					<a style="text-decoration: none; color: black;" href="index.html"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+				</div>
+		        <div class="col-xs-9 col-sm-9 col-md-9 text-center tituto">
+			         <h1>Sign up</h1>
+			         <p>Join now for free ride credit</p>  
+		        </div>
+		        <hr style="width: 100%;">
+	      	</div>
+	    </div>
+	</header>
+	<i class="fa fa-newspaper-o" aria-hidden="true"></i>
+<!--*********************************************PARTE DEL PAIS Y EL TELEFONO*************************************-->
+	<section class="postal codigo_postal">
+		<div class="container">
+	        <div class="row">
+	            <div class="col-md-offset-1 col-md-10 ">     
+	                <div class="input-group">
+	                    <div class="input-group-btn">
+	                        <a type="button" class="btn btn-default" aria-expanded="false" id="btn_pais" href="country.html"><img src="#" style="width: 200%; " id="imgPais" alt=""><span class="caret"></span></a>
+	                    </div>
+	                    <span class="input-X-addon" id="code" ></span>
+	                    <input type="text" id="numero"  class="form-control" aria-label="..." placeholder="123456789" onkeydown="checkInput_nombre(event)" onkeyup="validaLongitud()">
+	                </div>
+	                <div  id="salida" class="text-center"></div>
+	                <br>   
+	            	<p class="text-center">We'll send a text to verify your phone</p>
+	        	</div>
+	        </div>
+	    </div>
+	</section>
+<!--*********************************************PARTE DEL BOTON NEXT*******************************************-->
+	<section class="next">
+		<div class="container">
+			<div class="row  ">
+		        <div class="col-xs-12 col-sm-12 col-md-12 text-center ">
+					<a style="text-decoration: none;" id="ref" href="#"><button  class="btn_log" onclick="generaRandom()" id="btn_log">Next</button></a>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--***********************************************FIN******************************************************-->
+	<script src="js/sign-up.js" type="text/javascript"></script>
+</body>
+</html>

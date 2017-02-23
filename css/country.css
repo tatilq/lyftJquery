@@ -1,0 +1,34 @@
+
+header a
+{
+	 background-color: #EA0B8C;
+	 padding: 10px;
+	 position: absolute;
+	 top: 20px;
+	 right: 5px;
+	 color: white;
+	 border:1px solid #D7D7D9;
+}
+.bandera
+{
+	width: 60px;
+	margin-bottom: 3px;
+	padding: 3px 5px;
+	margin-right: 10px;
+}
+.paises li
+{
+	padding: 15px;
+	outline: 1px solid #D7D7D9;
+}
+.paises li:hover
+{
+	background-color:  #D7D7D9;
+	border: 2px solid: #EA0B8C;
+
+}
+#iconSearch
+{
+	background-color: white;
+	border-right: none;
+}

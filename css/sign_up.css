@@ -1,0 +1,58 @@
+section .codigo_postal
+{
+	margin: 0 auto;
+}
+header p
+{
+	font-size: 20px;
+}
+.tituto
+{
+	margin-left:20px;
+}
+#btn_pais 
+{
+	padding: 10px 20px 10px 10px;
+}
+#numero
+{
+	padding: 20px;
+}
+section .btn_log
+{
+	width: 100%;
+	padding: 10px; 
+	background-color: #EA0B8C;
+	color: white;
+	border:none;
+	border-radius: 5px;
+}
+section a
+{
+	font-size: 30px;
+}
+.next
+{
+	position: absolute;
+	bottom:0px;
+    right:0px;
+    left: 0px;
+	margin-bottom: 10px;
+}
+.anterior i
+{
+	margin-top: 20px;
+	font-size:40px;
+}
+#code
+{
+	border-right:none;
+	border-left:none;
+	background-color:white;
+	box-shadow: none;
+}
+#numero
+{
+	border-left: none;
+	box-shadow: none;
+}

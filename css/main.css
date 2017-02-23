@@ -1,0 +1,78 @@
+*{
+  font-family: 'Schoolbell', cursive;
+
+}
+/*ESTA ES LA SECCION DEL HEADER*/
+body{   
+     background-image:url(../img/fondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover ;  
+}
+header{
+	background: -moz-linear-gradient(bottom,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.91) 82%, rgba(0,0,0,0.91) 100%);
+    background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,20%) 1%,rgba(0,0,0,0.91) 82%,rgba(0,0,0,0.91) 100%); 
+    background: linear-gradient(to top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.91) 82%,rgba(0,0,0,0.91) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#00000000', endColorstr='#e8000000',GradientType=0 ); 
+}
+
+header .logo 
+{
+	color: white;
+	margin: 0 auto;
+	width: 25%;
+	margin:20px 0px;
+	/*background-color: #EA0B8C; */
+}
+section
+{
+	position: absolute;
+	bottom:0px;
+    right:0px;
+    left: 0px;
+	margin: 0 auto;
+	padding: 10px;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.91) 82%, rgba(0,0,0,0.91) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,20%) 1%,rgba(0,0,0,0.91) 82%,rgba(0,0,0,0.91) 100%); 
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.91) 82%,rgba(0,0,0,0.91) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#00000000', endColorstr='#e8000000',GradientType=0 ); 
+}
+section .btn_sign
+{
+	width: 150px;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 5px;
+	color: white;
+	
+    background: linear-gradient(to right, rgba(184,11,140,0.1) 10% ,rgba(184,11,140,0.4) 40%,rgba(255,0,166,0.7) 70%, rgb(255,0,166) 100%  ); 
+    filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#00000000', endColorstr='#e8000000',GradientType=0 ); 
+    clear: both;
+
+    /**linear-gradient(to bottom right,#EA0B8C,#B80B8C);
+    background: linear-gradient(to bottom right,#EA0B8C 10%,#B80B8C 20%);*/
+}
+section .btn_log
+{
+	width: 150px;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 5px;
+	color: white;
+	}
+section a
+{
+	font-size: 20px;
+}
+section .btn_log
+{
+	background-color: rgba(40,20,100,0.4);	
+	color: white;
+}
+section .btn_sign
+{
+	background-color: rgba(244,63,233,0.6);
+	color: white;
+	border:none;
+}

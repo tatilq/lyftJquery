@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/country.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
+	<link rel="shortcut icon" href="ico_lyft.ico">
+	<title>Lyft</title>
+</head>
+<body onload="init()">
+<!--******************************************PARTE DEL HEADER COMUN**************************************-->
+	<header>
+		<div class="container">
+	  		<div class="row ">
+		  		<div class="col-xs-10 col-sm-10 col-md-10 text-center">
+				    <h1>Select Country</h1>
+		        </div>
+		        <div class="col-xs-2 col-sm-2 col-md-2">
+		        	<a href="sign-up.html"  style="text-decoration: none;"class="btn_default">Close</a>
+		        </div>
+				
+	      	</div>
+	    </div>
+	</header>
+<!--*******************************************PARTE DE LA LISTA DE LOS PAISES****************************-->
+	<section class="paises">
+		<div class="container">
+			<div class="row ">
+				<div class=" col-md-12 ">
+					<div class="input-group">
+			          	<span class="input-group-addon" id="iconSearch"><i class="fa fa-search" aria-hidden="true"></i></span>
+			          	<input name="email" id="search" autofocus typse="text" required class="form-control" placeholder="Email" onkeyup="searchChat()">
+				    </div>
+				</div>
+			</div>
+			<br>
+			<div class="row ">
+				<div class=" col-md-12 ">
+					<ul class="list-unstyled " id="lista_paises">
+						<!--AQUI SE ENLISTARAN LOS PAISES-->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--******************************************************FIN******************************************-->
+	<script type="text/javascript" src="js/country.js"></script>
+</body>
+</html>
