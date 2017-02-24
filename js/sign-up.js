@@ -15,7 +15,7 @@ function init()
 		$('#code').text(codeLocal);
 	}
 }
-//-----------------------------------------FUNCION PARA REGRESAR A INICIO------------------------------//
+//-----------------------------------------FUNCION PARA REGRESAR A INICIO----------------------------------------//
 function regresar()
 {
   window.location="index.html";
@@ -40,8 +40,7 @@ function  validaLocalStorageImage()
 function isNumberPhone(number)
 {
 	var isValid=false;
-	var expr =/([0-9]+)/;
-	if (number.match(expr))
+	if (/^([0-9])*$/.test(number))
 	    isValid= true;
 	return isValid;
 }
@@ -52,13 +51,21 @@ function validaLongitud()
 	var numero=$('#numero').val();
 	var isValid=false;
 
-	if(isNumberPhone(numero) && numero.length==9){
-		salida.html("<span style='color:green; font-style:italic;'>Numero Valido</span>"); 
-		isValid=true;
+	if(isNumberPhone(numero))
+	{	
+		if(numero.length<9 || numero.length>9  )
+		{
+			salida.html("<span style='color:red; font-style:italic;'>Max 9 numeros</span>"); 
+		}
+		else
+		{
+			salida.html("<span style='color:green; font-style:italic;'>Numero Valido</span>"); 
+			isValid=true;
+		}
 	}
-	else
-		salida.html("<span style='color:red; font-style:italic;'>Incorrecto,Max 9 numeros</span>");
-	
+	else{
+		salida.html("<span style='color:red; font-style:italic;'>Incorrecto, solo numeros</span>");
+	}
 	return isValid;
 }
 /****************************************FUNCION RAMDOOM PARA NUMEROS DE 3 CIFRAS*******************************/

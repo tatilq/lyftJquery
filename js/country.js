@@ -3,7 +3,8 @@ $(document).ready(init);
 /************FUNCION INIT, PARSEA DE MI JSON PAISES Y GENERA UNA LISTA CON MIS DATOS YA PARSEADOS**************/
 function init()
 {
-	$('#search').keyup(searchChat);
+	//$('#search').keyup(searchChat);
+	
 	var lista_paises=$('#lista_paises');
 	var pais = $.parseJSON(paises);
 	$.each(pais, function() 
@@ -15,6 +16,7 @@ function init()
 		lista_paises.append(htmlList);
 	});
 	asignaEventoClick();
+	console.log($("html").parents());
 }	
 /*********************************FUNCION QUE ASIGNA EL EVENTO CLICK A CADA 'LI' DE MI 'UL'****************************/
 function asignaEventoClick()
