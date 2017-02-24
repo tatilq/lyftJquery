@@ -3,8 +3,8 @@ $(document).ready(init);
 /************FUNCION INIT, PARSEA DE MI JSON PAISES Y GENERA UNA LISTA CON MIS DATOS YA PARSEADOS**************/
 function init()
 {
-	//$('#search').keyup(searchChat);
-	
+	$('#search').keyup(searchChat);
+
 	var lista_paises=$('#lista_paises');
 	var pais = $.parseJSON(paises);
 	$.each(pais, function() 
@@ -12,7 +12,6 @@ function init()
 		var htmlList='<a href="sign-up.html"><li class="lisPais"><img src='+ this['img'] + 
 		' class="img_responsive bandera"><span class="code"'+ 
 		' style="display:none;">'+this['codigo']+'</span>'+ this['nombre']+'</li></a>';
-
 		lista_paises.append(htmlList);
 	});
 	asignaEventoClick();
