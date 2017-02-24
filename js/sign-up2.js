@@ -6,8 +6,14 @@ function init()
   $("#name").keyup(validaName); 
   $("#lastname").keyup(validaLastname); 
   $("#email").keyup(validaEmail); 
-  $("#btn_enviar").click(validateForm); 
   $("#check").change(chequear); 
+  $("#btnNext").click(validateForm); 
+  $("#iconPrev").click(regresar); 
+}
+//-----------------------------------------FUNCION PARA REGRESAR A LA VISTA ANTERIOR------------------------------//
+function regresar()
+{
+  window.location="sign-up.html";
 }
 //-----------------------------------------FUNCION PRINCIPAL LLAMA A LAS DEMAS FUNCIONES--------------------------//
 function validateForm()
@@ -15,53 +21,47 @@ function validateForm()
   var name=$("#name").val();
   var lastname=$("#lastname").val();
   var email=$("#email").val();
-  validaName();
-  validaLastname(); 
-  validaEmail(); 
+  validaName(),validaLastname(),validaEmail(); 
 
   if(validaName() && validaLastname() && validaEmail() && chequear())
   {
     localStorage.setItem('LastName',lastname);
     localStorage.setItem('Name',name);
     localStorage.setItem('Email',email);
-    location.href="app.html";
+    window.location="app.html";
   }
   else
   {
-    alert("Todos los campos son Obligatorios");
+    alert("LLena todos los campos correctamente");
   }
 }
-//------------------------------------FUNCION QUE CONVIERTE LA PRIMERA LETRA EN MAYUSCULA-------------------------//
-function primMayuscula(id)
+//-------------------------------------------VALIDA EXPRESION REGULAR DE SOLO LETRAS----------------------------------// 
+function isAlphabetic(cadena)
 {
-  var nombreArray = id.split("");
-  var primeraLetra = nombreArray[0];
-  var primeraMayus = primeraLetra.toUpperCase();
-  var cortePalabra = false;
-  for(var i=1;i<nombreArray.length;i++)
-  {
-    if(cortePalabra)
-    {    
-      primeraMayus += nombreArray[i].toUpperCase();
-      cortePalabra = false;
-    }
-    if(nombreArray[i] == " ")
-      cortePalabra = true;
-    else
-      primeraMayus+=nombreArray[i];    
-  }
+  var isValid=false;
+  if(cadena.match(/^[a-zA-Z\s]*$/))
+    isValid=true;
+
+  return isValid;
+}
+//-------------------------------------------VALIDA EXPRESION REGULAR DE EMAIL----------------------------------//
+function isEmail(email) 
+{
+  var isValid=false;
+  var expr =/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/;
+  if(email.match(expr))
+    isValid= true;
   
-  return primeraMayus;
-}  
+  return isValid;
+}
 //-------------------------------------------VALIDA NOMBRE SEGUN FORMATO VALIDO----------------------------------//
 function validaName() 
 {
   var container=$("#container");
   var name=$("#name");
   var isValid=false;
-  if(name.val().length >0 && name.val().length <=30 && name.val().match(/^[a-zA-Z\s]*$/))
-  {
-    name.val(primMayuscula(name.val()));  
+  if(name.val().length >0 && name.val().length <=30 && isAlphabetic(name.val()))
+  {  
     container.html("<small style='color:green;'>Campo correctamente llenado ✔</small>");
     name.css('backgroundColor',"white");
     isValid=true;
@@ -69,7 +69,6 @@ function validaName()
   else{ 
     container.html("<small style='color:red;'>Debes escribir solo letras , max 30 caracteres</small>");
     name.css('backgroundColor',"#FFDDE5");
-    isValid=false;
   }
   return isValid;
 }
@@ -79,9 +78,8 @@ function validaLastname()
   var container=$("#container");
   var lastname=$("#lastname"); 
   var isValid=false;
-  if(lastname.val().length >0 && lastname.val().length <=30 && lastname.val().match(/^[a-zA-Z\s]*$/))
+  if(lastname.val().length >0 && lastname.val().length <=30 && isAlphabetic(lastname.val()))
   {    
-    lastname.val(primMayuscula(lastname.val()));
     container.html("<small style='color:green;'>Campo correctamente llenado ✔</small>");
     lastname.css('backgroundColor',"white");
     isValid=true;
@@ -89,7 +87,6 @@ function validaLastname()
   else{ 
     container.html("<small style='color:red;'>Debes escribir solo letras , max 30 caracteres</small>");
     lastname.css('backgroundColor',"#FFDDE5");
-    isValid=false;
   }
   return isValid;
 }
@@ -99,7 +96,7 @@ function validaEmail()
   var containerEmail=$("#containerEmail");
   var email=$("#email"); 
   var isValid=false;
-  if(email.val().length >0 && email.val().length <=50 && email.val().match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/))
+  if(email.length >0 && email.length <=50 && isEmail(email.val()))
   {  
     containerEmail.html("<small style='color:green;'>Formato valido ✔</small>");
     email.css('backgroundColor',"white");
@@ -109,7 +106,6 @@ function validaEmail()
   {
     containerEmail.html("<small style='color:red;'>Invalido Ejm: name@domain.com, max 50 caracteres</small>");
     email.css('backgroundColor',"#FFDDE5");
-    isValid=false;
   }
   return isValid;
 }
@@ -117,10 +113,11 @@ function validaEmail()
 function chequear()
 {
   var marcado = $("#check").prop("checked") ? true : false;
-
-  if(marcado){isValid=true;}
-  if(!marcado){isValid=false;}
-  
+  var isValid=false;
+  if(marcado)
+    isValid=true;
   return isValid;
 }
 //----------------------------------------------------------FIN----------------------------------------------------//
+
+

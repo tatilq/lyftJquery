@@ -1,7 +1,4 @@
-//---------------------------------------DECLARARCION DE VARIABLES GOBLALES---------------------------------------//
-var map;
-var lat;
-var long;
+$(document).ready(init);
 //----------------------------------------FUNCION INIT LLAMA A LA FUNCION OBTENER--------------------------------//
 function init()
 {
@@ -15,9 +12,9 @@ function obtener()
 //------------------------------ --------FUNCION QUE OBTINEN MI POSICION ACTUAL-----------------------------------//
 function mostrar(posicion)
 {
-  lati=posicion.coords.latitude;
-  longi=posicion.coords.longitude;
-  initMap(lati, longi);
+  var lati=posicion.coords.latitude;
+  var longi=posicion.coords.longitude;
+  initMap(lati,longi);
 }
 //--------------------------------------FUNCION PARA GESTIONAR ALGUN TIPO DE ERROR------------------------------//
 function gestionarErrores(error)
@@ -29,14 +26,15 @@ function gestionarErrores(error)
 function initMap(lati, longi) 
 {
   var positionActual={lat: lati, lng: longi};
-  var position1={lat:  -16.4349299, lng: -71.5342893};
-  var position2={lat:  -16.4459299, lng: -71.5299393};
-  map = new google.maps.Map(document.getElementById('map'),{ center: positionActual, zoom: 14 });
+  var position1={lat: lati+0.002 , lng: longi+0.004};
+  var position2={lat: lati+0.009 , lng: longi+0.001};
+  var position3={lat: lati+0.003, lng: longi+0.03};
+  var map = new google.maps.Map(document.getElementById('map'),{ center: positionActual, zoom: 14 });
 
   var marker = new google.maps.Marker({//parametro recibe un objeto
   position: positionActual,
   map: map ,     
-  title: 'POSICION ACTUAL',
+  title: 'Aqui Estoy¡',
   icon:'img/persona.png'
 
   }
@@ -45,7 +43,7 @@ function initMap(lati, longi)
   var marker1 = new google.maps.Marker({//parametro recibe un objeto
   position: position1,
   map: map ,     
-  title: 'RUTA1',
+  title: 'BatiMovil1',
   icon:'img/car.png'
 
   }
@@ -54,7 +52,16 @@ function initMap(lati, longi)
   var marker2 = new google.maps.Marker({//parametro recibe un objeto
   position: position2,
   map: map ,     
-  title: 'RUTA2',
+  title: 'BatiMovil2',
+  icon:'img/car.png'
+
+  }
+  );
+
+  var marker3 = new google.maps.Marker({//parametro recibe un objeto
+  position: position3,
+  map: map ,     
+  title: 'BatiMovil3',
   icon:'img/car.png'
 
   }
