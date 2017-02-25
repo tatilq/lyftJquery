@@ -57,28 +57,31 @@ function validaLongitud()
 	
 	return isValid;
 }
-
 /***********************FUNCION QUE SOLO GENERA EL CODIGO ALEATORIO SI EL TELEFONO ES CORRECTO*****************/
 function  getCodigo()
 {
 	if(validaLongitud())
 	{
-		var codigo= "LAB-"+Math.floor(Math.random()*(999)+100);
+		var codigo= "LAB-"+Math.floor(Math.random()*(999));
 		localStorage.setItem('codigoLab',codigo);
 	    swal({
-	      title: "Se generó tu código",
+	      title: "¡Se generó tu código exitosamente!",
 	      text: "Tú código de usuario es:" + codigo,
-	      type: "info"
+	      imageUrl: "img/likes.png"
 	    },function(isConfirm){
 	      	if (isConfirm)
 	      	{
-	        	swal("Código aceptado", "", "success");
 	        	setTimeout(function(){window.location="sign-up2.html";}, 50);
 	        } 
 	    });
 	}
 	else
 	{
+		swal({
+		  title: "¡Numero Invalido!",
+		  text: "Escribe un numero de telefono valido según tu país",
+		  imageUrl: "img/deslikes.png"
+		});
 		$('#numero').focus();
 		$('#numero').val('');
 	}	

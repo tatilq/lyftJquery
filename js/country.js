@@ -15,7 +15,6 @@ function init()
 		lista_paises.append(htmlList);
 	});
 	asignaEventoClick();
-	console.log($("html").parents());
 }	
 /*********************************FUNCION QUE ASIGNA EL EVENTO CLICK A CADA 'LI' DE MI 'UL'****************************/
 function asignaEventoClick()
@@ -34,18 +33,16 @@ function onLinkClick(evt)
 /****************************FUNCION QUE PERMITE BUSCAR PAISES EN LISTA X EL ALFABETO*******************/
 function searchChat()
 {
-	var chatsList=document.getElementsByClassName("lisPais");
-	var search = document.getElementById("search");//id del input
-	var forEach = Array.prototype.forEach;
-	search.addEventListener("keyup", function(e){
-	    var choice = this.value;
-	    forEach.call(chatsList, function(f){
-	        if (f.innerHTML.toLowerCase().search(choice.toLowerCase()) == -1 )
-	            f.style.display = "none";        
-	        else
-	            f.style.display = "block";        
-	    });
-	}, false);
-};
+	(function ($) {
+	    $('#search').keyup(function () {
+
+	        var rex = new RegExp($(this).val(), 'i');
+	        $('li').hide();
+	        $('li').filter(function () {
+	            return rex.test($(this).text());
+	        }).show();
+	    })
+	}(jQuery));
+}
 /*****************************************************FIN********************************************/
 

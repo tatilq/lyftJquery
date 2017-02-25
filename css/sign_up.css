@@ -1,10 +1,6 @@
-section .codigo_postal
+header small
 {
-	margin: 0 auto;
-}
-header p
-{
-	font-size: 20px;
+	font-size: 15px;
 }
 .tituto
 {
@@ -31,10 +27,6 @@ section .btn_log
 	color: white;
 	border:none;
 	border-radius: 5px;
-	font-size: 30px;
-}
-section a
-{
 	font-size: 30px;
 }
 .next

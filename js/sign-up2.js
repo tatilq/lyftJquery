@@ -28,31 +28,33 @@ function validateForm()
     localStorage.setItem('LastName',lastname);
     localStorage.setItem('Name',name);
     localStorage.setItem('Email',email);
-    window.location="app.html";
+    swal({
+      title: "¡Formulario correctamente enviado!",
+      imageUrl: "img/goods.png"
+    },function(isConfirm)
+    {
+      if (isConfirm){setTimeout(function(){window.location="app.html";}, 50);
+    } 
+    });
   }
   else
   {
-    alert("LLena todos los campos correctamente");
+    swal({
+      title: "¡Formulario Incompleto!",
+      text:"LLenar todos los campos correctamente",
+      imageUrl: "img/bads.png"
+    });
   }
 }
 //-------------------------------------------VALIDA EXPRESION REGULAR DE SOLO LETRAS----------------------------------// 
 function isAlphabetic(cadena)
 {
-  var isValid=false;
-  if(cadena.match(/^[a-zA-Z\s]*$/))
-    isValid=true;
-
-  return isValid;
+  return(cadena.match(/^[a-zA-Z\s]*$/));
 }
 //-------------------------------------------VALIDA EXPRESION REGULAR DE EMAIL----------------------------------//
 function isEmail(email) 
 {
-  var isValid=false;
-  var expr =/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/;
-  if(email.match(expr))
-    isValid= true;
-  
-  return isValid;
+  return(email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/));
 }
 //-------------------------------------------VALIDA NOMBRE SEGUN FORMATO VALIDO----------------------------------//
 function validaName() 
@@ -112,11 +114,7 @@ function validaEmail()
 //---------------------------VALIDA QUE EL CHECKBOX ESTE CHEADO EN TERMINOS Y CONDICIONES---------------------------//
 function chequear()
 {
-  var marcado = $("#check").prop("checked") ? true : false;
-  var isValid=false;
-  if(marcado)
-    isValid=true;
-  return isValid;
+  return($("#check").prop("checked") ? true : false);
 }
 //----------------------------------------------------------FIN----------------------------------------------------//
 
