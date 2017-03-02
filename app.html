@@ -13,27 +13,38 @@
 </head>
 <body >
 <!--*******************************PARTE DEL CONTENEDOR DEL MAPA**************************************-->
-	<div class="container-fluid">
+<div class="container-fluid">
+	<div class="row">
+		<div id="map"></div>
+	</div>
+</div>
+
+<!--*******************************PARTE DEL BOTON**************************************-->
+	<div class="container-fluid menuDrop">
+		
 		<div class="row">
-			<div id="map"  style=" height:600px; outline: 1px solid grey; "></div>
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="dropdown drop">
+					<button class="btn-log" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-chevron-down dIcon " aria-hidden="true"></i>
+					 2300 Harrison  St<p>Pickup Location</p>
+					 </button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Line <span>3</span></p><p class="shared">Shared, 2 riders max <span>min</span></p></li>
+					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Lyft <span>3</span></p><p class="shared">4 seats <span>min</span></p></li>
+					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Plus <span>4</span></p><p class="shared">6 seats <span>min</span></p></li>
+					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Premier <span>3</span></p><p class="shared">High-end, 4 seats  <span>min</span></p></li>
+					</ul>
+			 	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<button class="btn_map" style=" background-color: blue; color:white;" >SET PICKUP</button>
+			</div>
 		</div>
 	</div>
-	<i class="fa fa-newspaper-o" aria-hidden="true"></i>
-	<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
 <!--*******************************PARTE DEL BOTON**************************************-->
-    <button class="btn-default btn_map" style=" background-color: blue; color:white;" >SET PICKUP</button>
+    
 <!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_dWJI0iTHSacVygR7yKybM8B_ZpHeovs&callback=init"
         async defer></script>

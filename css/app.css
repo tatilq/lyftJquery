@@ -1,5 +1,12 @@
 
 /*ESTILOS AL BOTON DEL MAPA*/
+.menuDrop
+{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+}
 .btn_map
 {
 	width: 100%;
@@ -7,51 +14,73 @@
 	margin: 0 auto;
 	border-radius: 5px;
 	color: white;
-    clear: both;
-    position: absolute;
-	bottom:0px;
-    right:0px;
-    left: 0px;
 	margin-bottom: 10px;
-
-}
-.drop
-{
-    position: relative;
-	bottom:0px;
-	
-    left: 10px;
 }
 .dIcon
 {
 	border-radius: 30px;
-	padding: 20px;
+	padding: 10px;
 	margin-right: 5px;
-	position: relative;
-	left: 0px;
-	border:1px  solid grey;
+	margin-top: 10px;
+	border:1px  solid black;
+}
+.dropdown-menu
+{
+	width: 70%;
+	box-shadow: none;
+}
+.dropdown-menu  span
+{
+	position: absolute;
+	right: 10px;
+
+}
+.shared  span
+{
+	position: absolute;
+	right: 5px;
 }
 .dropdown-menu li
 {
 	padding: 5px;
+	font-size: 15px;
 }
 .dropdown-menu li:hover
 {
 	background-color:  #D7D7D9;
 	border: 2px solid: #EA0B8C;
+	color: blue !important;
 }
-.dropdown-menu li:select
-{
-	background-color:  #D7D7D9;
-	border: 2px solid: #EA0B8C;
-}
-.dropdown .btn
+.dropdown .btn-log
 {
 	text-align: left;
 	width: 100%;	
+	border-radius: 10px;
+	border:1px solid grey;
+	background-color: white;
+	margin-top: 5px;
+	font-size: 17px;
 }
-.btn p
+.btn-log p
 {
-	padding-left: 45px;	
+	padding-left: 55px;	
+	font-size: 12px;
+	margin-top: -7px;
+
+}
+.shared
+{
+	margin-left: 33px;	
+	font-size: 12px;
+	margin-top: -9px;
 }
 /*FIN DE ESTILOS AL BOTON DEL MAPA*/
+
+
+/**/
+#map{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-repeat:no-repeat;
+}

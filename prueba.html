@@ -11,28 +11,31 @@
 	<link rel="shortcut icon" href="ico_lyft.ico">
 	<title>lift</title>
 </head>
-<body >
+<body id="map" >
 <!--*******************************PARTE DEL CONTENEDOR DEL MAPA**************************************-->
 	<div class="container-fluid">
 		<div class="row">
-			<div id="map"  style=" height:600px; outline: 1px solid grey; "></div>
+			<div ></div>
 		</div>
 	</div>
 	
 <!--*******************************PARTE DEL BOTON**************************************-->
-    
-
-    <div class="dropdown drop">
-   
-	  <button class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-chevron-down dIcon " aria-hidden="true"></i>
-	    2300 Harrison  St <p>Pickup Location</p>
-	  </button>
-	  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-	    <li>Line</li>
-	    <li>Lyft</li>
-	    <li>Plus</li>
-	    <li>Premier</li>
-	  </ul>
+	<div class="container-fluid menuDrop">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="dropdown drop">
+					<button class="btn-log" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-chevron-down dIcon " aria-hidden="true"></i>
+					 2300 Harrison  St<p>Pickup Location</p>
+					 </button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Line <span>3</span></p><p class="shared">Shared, 2 riders max <span>min</span></p></li>
+					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Lyft <span>3</span></p><p class="shared">4 seats <span>min</span></p></li>
+					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Plus <span>4</span></p><p class="shared">6 seats <span>min</span></p></li>
+					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Premier <span>3</span></p><p class="shared">High-end, 4 seats  <span>min</span></p></li>
+					</ul>
+			 	</div>
+			</div>
+		</div>
 	</div>
 <!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
 	
