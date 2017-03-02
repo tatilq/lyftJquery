@@ -2,6 +2,7 @@ $(document).ready(init);
 //--------------------------------------FUNCION QUE OBTIENE TU POSICION ACTUAL-----------------------------------//
 function init()
 {
+  $('.dropdown-menu').css({"position":"absolute" , "bottom":"100%" , "top":"initial"});
   navigator.geolocation.watchPosition(mostrar, gestionarErrores);
 }
 //------------------------------ --------FUNCION QUE OBTINEN MI POSICION ACTUAL-----------------------------------//

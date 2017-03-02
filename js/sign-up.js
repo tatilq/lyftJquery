@@ -7,12 +7,15 @@ function init()
 	$('#btnNext').click(getCodigo);
 	$("#iconPrev").click(regresar); 
 	$('#numero').focus();
-	if(validaLocalStorageCode() && validaLocalStorageImage())
+	if(validaLocalStorageCode() || validaLocalStorageImage())
 	{
-		var srcLocal=localStorage.getItem('srcImgPais');
-		var codeLocal=localStorage.getItem('codigo');
-		$('#imgPais').attr({'src': srcLocal});
-		$('#code').text(codeLocal);
+		$('#imgPais').attr({'src': 'img/peru.png'});
+		$('#code').text('+51');
+	}
+	else
+	{
+		$('#imgPais').attr({'src': localStorage.getItem('srcImgPais')});
+		$('#code').text(localStorage.getItem('codigo'));
 	}
 }
 //-----------------------------------------FUNCION PARA REGRESAR A INICIO----------------------------------------//
@@ -23,12 +26,12 @@ function regresar()
 /****************************Funcion que valida que el  Codigo exista en mi LocalStorage***************************/
 function  validaLocalStorageCode()
 {
-	return (localStorage.getItem('codigo') != null);
+	return (localStorage.getItem('codigo') == null);
 }
 /****************************Funcion que el 'SRC' de la imagen exista en mi LocalStorage***************************/
 function  validaLocalStorageImage()
 {
-	return(localStorage.getItem('srcImgPais') != null);
+	return(localStorage.getItem('srcImgPais') == null);
 }
 /*****************************FUNCION QUE VALIDA EXPRESION REGULAR DE SOLO NUMEROS------***********************/
 function isNumberPhone(number)
@@ -41,7 +44,7 @@ function validaLongitud()
 	var salida=$('#salida');
 	var numero=$('#numero').val();
 	var isValid=false;
-
+	console.log($('html').parent());
 	if(isNumberPhone(numero))
 	{	
 		if(numero.length<9 || numero.length>9  )
@@ -86,3 +89,5 @@ function  getCodigo()
 		$('#numero').val('');
 	}	
 }
+/*****************************************************FIN********************************************/
+

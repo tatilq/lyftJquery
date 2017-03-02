@@ -1,11 +1,11 @@
 *{
-  font-family: 'Schoolbell', cursive;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 }
 /*ESTA ES LA SECCION DEL HEADER*/
 body{   
-     background-image:url(../img/fondo.jpg);
-    background-position: center center;
+     background-image:url(../img/fondo1.jpg);
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover ;  
@@ -21,9 +21,8 @@ header .logo
 {
 	color: white;
 	margin: 0 auto;
-	width: 25%;
+	width: 35%;
 	margin:20px 0px;
-	/*background-color: #EA0B8C; */
 }
 section
 {
@@ -45,13 +44,7 @@ section .btn_sign
 	margin: 0 auto;
 	border-radius: 5px;
 	color: white;
-	
-    background: linear-gradient(to right, rgba(184,11,140,0.1) 10% ,rgba(184,11,140,0.4) 40%,rgba(255,0,166,0.7) 70%, rgb(255,0,166) 100%  ); 
-    filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#00000000', endColorstr='#e8000000',GradientType=0 ); 
-    clear: both;
-
-    /**linear-gradient(to bottom right,#EA0B8C,#B80B8C);
-    background: linear-gradient(to bottom right,#EA0B8C 10%,#B80B8C 20%);*/
+   background: linear-gradient(to right, rgba(135,0,191,0.45) 10%,rgba(135,0,191,0.5) 20%,rgba(224,0,191,0.8) 85%,rgba(224,0,191,0.9) 100%);
 }
 section .btn_log
 {

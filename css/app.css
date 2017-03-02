@@ -15,4 +15,43 @@
 	margin-bottom: 10px;
 
 }
+.drop
+{
+    position: relative;
+	bottom:0px;
+	
+    left: 10px;
+}
+.dIcon
+{
+	border-radius: 30px;
+	padding: 20px;
+	margin-right: 5px;
+	position: relative;
+	left: 0px;
+	border:1px  solid grey;
+}
+.dropdown-menu li
+{
+	padding: 5px;
+}
+.dropdown-menu li:hover
+{
+	background-color:  #D7D7D9;
+	border: 2px solid: #EA0B8C;
+}
+.dropdown-menu li:select
+{
+	background-color:  #D7D7D9;
+	border: 2px solid: #EA0B8C;
+}
+.dropdown .btn
+{
+	text-align: left;
+	width: 100%;	
+}
+.btn p
+{
+	padding-left: 45px;	
+}
 /*FIN DE ESTILOS AL BOTON DEL MAPA*/
