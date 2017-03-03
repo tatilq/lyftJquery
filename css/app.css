@@ -153,23 +153,23 @@ header .logo{
 .self_info{
     margin: 0  10px; 
 }
-
-
-.next #btn_next
+#next
 {
+	
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+#btn_next
+{
+	padding: 10px;
 	width: 100%;
+	border-top: 0px;
 	padding: 10px; 
 	background-color: #474c62;
 	color: white;
 	border:none;
 	border-radius: 5px;
 	font-size: 30px;
-}
-.next
-{
-	position: absolute;
-	bottom:0px;
-    right:0px;
-    left: 0px;
-	margin-bottom: 10px;
 }
