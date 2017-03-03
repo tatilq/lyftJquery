@@ -114,3 +114,62 @@
 	border:1px solid grey;
 	margin-bottom: 5px;
 }
+/*ESTILOS DELA APP2*/
+header{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+header .lyft
+{
+	margin-top: 15px;
+
+}
+header .logo{
+    width: 40px;
+    display: inline-block;
+    color: white;
+}
+.img_face{
+    border-radius: 100%;
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border:1px solid rgba(0,0,0,0.2);;
+}
+.content_photo{
+    padding: 50px;
+}
+.price{
+    font-size: 30px;
+    margin-top: 60px;
+}
+.opciones button{
+    background: none;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.opciones button:hover{
+    background-color: #EA0B8C;
+    color:#fff;
+}
+.self_info{
+    margin: 0  10px; 
+}
+
+
+.next #btn_next
+{
+	width: 100%;
+	padding: 10px; 
+	background-color: #474c62;
+	color: white;
+	border:none;
+	border-radius: 5px;
+	font-size: 30px;
+}
+.next
+{
+	position: absolute;
+	bottom:0px;
+    right:0px;
+    left: 0px;
+	margin-bottom: 10px;
+}

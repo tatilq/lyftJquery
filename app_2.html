@@ -12,43 +12,78 @@
 	<title>lift</title>
 </head>
 <body >
-<!--*******************************PARTE DEL CONTENEDOR DEL MAPA**************************************-->
-<div class="container-fluid">
-	<div class="row">
-		<div id="map"></div>
-	</div>
-</div>
 
-<!--*******************************PARTE DEL BOTON**************************************-->
-	<div class="container-fluid menuDrop">
-		
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12">
-				<div class="dropdown drop">
-					<button class="btn-log" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-chevron-down dIcon " aria-hidden="true"></i>
-					 2300 Harrison  St<p>Pickup Location</p>
-					 </button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Line <span>3</span></p><p class="shared">Shared, 2 riders max <span>min</span></p></li>
-					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Lyft <span>3</span></p><p class="shared">4 seats <span>min</span></p></li>
-					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Plus <span>4</span></p><p class="shared">6 seats <span>min</span></p></li>
-					    <li><p class="justificar"><i class="fa fa-car carros" aria-hidden="true"></i>&nbsp &nbsp Premier <span>3</span></p><p class="shared">High-end, 4 seats  <span>min</span></p></li>
-					</ul>
-			 	</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12">
-				<button class="btn_map">SET PICKUP</button>
-			</div>
-		</div>
-	</div>  
-<!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_dWJI0iTHSacVygR7yKybM8B_ZpHeovs&callback=init"
-        async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/app.js" type="text/javascript"></script>
+	
+<!--**************************************HEADER********************************-->
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4 lyft">
+                <span class="fa fa-ellipsis-v"></span>
+                <img src="img/logo_lyft.png" class="logo">    
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                <h3>Payment</h3>
+            </div>    
+        </div>
+    </div>
+</header>
+<!--*******************************************************************************-->
+<section class="driver_image">
+    <div class="container content_photo">
+            <img src="img/perfil.jpg" class="img-responsive img_face" alt="">     
+    </div>
+</section>  
+<!--*******************************************************************************-->
+<section class="driver-info">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="btn-group  opciones" role="group">
+                    <button class="btn btn-1" type="button">No tip</button>
+                    <button class="btn btn-2" type="button">$1</button>
+                    <button class="btn btn-3" type="button">$2</button>
+                    <button class="btn btn-4" type="button">$5</button>
+                    <button class="btn btn-5" type="button">Other</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<!--************************************-PAYMENT-INFO*********************************-->
+<section class="payment-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-credit-card"></i> &nbspPayment</button> 
+                    </span>
+                    <div type="text" class="form-control text-right">
+                        <ul class="list-unstyled list-inline">
+                            <li>*1234</li>
+                            <li><i class="fa fa-angle-right"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</section>
+<!--************************************PAYMENT-PRICE************************************-->
+<section class="price">
+    <div class="container">
+        <div class="text-center">
+                <span>$9.00</span>   
+        </div>   
+    </div>
+</section>
+<!--*********************************************button-next*************************************+-->
+<div class="text-center  next" id="button-next" >
+        <button href="#" id="btn_next">Next</button>
+</div>    
+
 <!--****************************************************FIN*******************************************-->
 </body>
 </html>
