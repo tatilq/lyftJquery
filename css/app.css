@@ -1,3 +1,5 @@
+
+
 /*ESTILOS DELA APP*/
 .menuDrop
 {
@@ -9,13 +11,9 @@
 }
 .btn_map
 {
-	width: 100%;
-	height: 60px;
 	background-color: #431B83;
-	margin: 0 auto;
-	border-radius: 5px;
 	color: white;
-	margin-bottom: 10px;
+	padding: 20px;
 }
 .dIcon
 {
@@ -81,95 +79,4 @@
 	position: absolute;
 	background-repeat:no-repeat;
 	clear: both;
-}
-/*ESTILOS DELA APP1*/
-.btnRequest
-{
-	width: 100%;
-	height: 60px;
-	background-color:#EA0B8C;;
-	margin: 0 auto;
-	border-radius: 5px;
-	color: white;
-	margin-bottom: 10px;
-}
-.prev
-{
-	background-color: white;
-	color: black;
-	padding: 10px;
-	border-radius: 80px;
-	border: 1px solid black;
-	margin-bottom: 10px;
-}
-#prev
-{
-	font-size:30px;
-}
-.menu
-{
-	clear: both;
-	border-radius: 20px;
-	background-color: white;
-	border:1px solid grey;
-	margin-bottom: 5px;
-}
-/*ESTILOS DELA APP2*/
-header{
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-header .lyft
-{
-	margin-top: 15px;
-
-}
-header .logo{
-    width: 40px;
-    display: inline-block;
-    color: white;
-}
-.img_face{
-    border-radius: 100%;
-    width: 40%;
-    margin: auto;
-    padding: 10px;
-    border:1px solid rgba(0,0,0,0.2);;
-}
-.content_photo{
-    padding: 50px;
-}
-.price{
-    font-size: 30px;
-    margin-top: 60px;
-}
-.opciones button{
-    background: none;
-    border: 1px solid rgba(0,0,0,0.1);
-}
-.opciones button:hover{
-    background-color: #EA0B8C;
-    color:#fff;
-}
-.self_info{
-    margin: 0  10px; 
-}
-#next
-{
-	
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-}
-#btn_next
-{
-	padding: 10px;
-	width: 100%;
-	border-top: 0px;
-	padding: 10px; 
-	background-color: #474c62;
-	color: white;
-	border:none;
-	border-radius: 5px;
-	font-size: 30px;
 }

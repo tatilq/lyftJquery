@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/app_1.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
@@ -20,58 +20,48 @@
 </div>
 
 <!--*************************PARTE DEL LYFT CAR***************************-->
-	 <div class="container text-center menuDrop ">
-		<div class="row ">
-	        <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-	            <i class="fa fa-arrow-left prev" id="prev" aria-hidden="true"></i>
-	        </div>
-	        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-	            <i class="fa fa-arrow-right prev" id="prev" aria-hidden="true"></i>
-	        </div>        
-		</div>
-		<div class="container">
-			<div class="row menu">
-		 		<div class="col-md-12 col-sm-12 col-xs-12 m">
-			        <div class="row containerLyft">
-			        	<div class="col-md-6 col-sm-6 col-xs-6 text-right ">
-			                <img src="img/car.png">
-			            </div>    
-			            <div class="col-md-6 col-sm-6 col-xs-6 text-left ">
-			                <ul class="list-unstyled">
-			                    <li><strong>Lyft</strong></li>
-			                    <li><small>Fast ride, 4 seats</small></li>
-			                </ul>
-			            </div>        
-			        </div>
-			        <div class="row containerLyft">
-			            <div class="col-md-6 col-sm-6 col-xs-6 personal">
-			                <ul class="list-unstyled">
-		                  		<li><i class="fa fa-cc-visa" style="color:red;" aria-hidden="true"></i>Personal</li>
-		                   		<li><small>Payment</small></li>
-		                	</ul>    
-		            	</div>
-		           		<div class="col-md-6 col-sm-6 col-xs-6">
-			                <ul class="list-unstyled">
-			                    <li>$6-12</li>
-			                    <li><small>Price stimate</small></li>
-			                </ul>
-		            	</div>    
-		        	</div>
-		       		<div class="row car_direction text-left">
-		            	<div class="col-md-12 col-sm-12 col-xs-12">
-		              		<p class="justificar "><i class="fa fa-circle " style="color: #EA0B8C;" aria-hidden="true"></i>&nbsp &nbsp 2300 Harrison St</p>
-							<p class="justificar"><i class="fa fa-circle " style="color: #431B83;" aria-hidden="true"></i>&nbsp &nbsp Caltrain Station</p>    
-		            	</div>         
-		        	</div>  
-		 		</div>
-		 	</div>
-		</div>
-    	<div class="row ">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-        		<button class="btnRequest">REQUEST LYFT</button>
-        	</div> 
-       </div>  
-    </div>
+    <section class="menuDrop">
+        <div class="container-table tabla">
+            <div class="row ">
+                <div class="col-xs-6 car ">
+                    <img class="img-responsive " src="img/car.png" alt="">         
+                </div>
+                <div class="col-xs-6 text-left">
+                    <h4>Lyft</h4>
+                    <small>Fast ride, 4 seats</small>
+                </div>
+            </div>
+            <div class="row containerLyft" >
+	            <div class="col-md-6 col-sm-6 col-xs-6 personal">
+	                <ul class="list-unstyled ">
+                  		<li class="text-center">Personal</li>
+                   		<li class="text-center"><small>Payment</small></li>
+                	</ul>    
+            	</div>
+           		<div class="col-md-6 col-sm-6 col-xs-6">
+	                <ul class="list-unstyled">
+	                    <li class="text-center">$6-12</li>
+	                    <li class="text-center"><small>Price stimate</small></li>
+	                </ul>
+            	</div>    
+        	</div>
+            <div class="row third">
+                <div class="col-xs-12 col-md-12 col-sm-12  text-left">
+                    <ul  class="list-unstyled list">
+                        <li ><i class="fa fa-circle " style="color: #EA0B8C;" aria-hidden="true"></i>&nbsp2300 Harrison St</li>
+                        <li ><i class="fa fa-circle " style="color: #431B83;" aria-hidden="true"></i>&nbspCaltrain station</li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    		<div class="row btn_map text-center ">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<a href="app_2.html">SET PICKUP</a>
+				</div>
+			</div> 
+    	
+    </section>
+      
 <!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_dWJI0iTHSacVygR7yKybM8B_ZpHeovs&callback=init"
         async defer></script>
