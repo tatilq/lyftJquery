@@ -1,16 +1,17 @@
-
-/*ESTILOS AL BOTON DEL MAPA*/
+/*ESTILOS DELA APP*/
 .menuDrop
 {
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
 	left: 0px;
+
 }
 .btn_map
 {
 	width: 100%;
 	height: 60px;
+	background-color: #431B83;
 	margin: 0 auto;
 	border-radius: 5px;
 	color: white;
@@ -66,7 +67,6 @@
 	padding-left: 55px;	
 	font-size: 12px;
 	margin-top: -7px;
-
 }
 .shared
 {
@@ -74,13 +74,43 @@
 	font-size: 12px;
 	margin-top: -9px;
 }
-/*FIN DE ESTILOS AL BOTON DEL MAPA*/
 
-
-/**/
 #map{
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	background-repeat:no-repeat;
+	clear: both;
+}
+/*ESTILOS DELA APP1*/
+.btnRequest
+{
+	width: 100%;
+	height: 60px;
+	background-color:#EA0B8C;;
+	margin: 0 auto;
+	border-radius: 5px;
+	color: white;
+	margin-bottom: 10px;
+}
+.prev
+{
+	background-color: white;
+	color: black;
+	padding: 10px;
+	border-radius: 80px;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+#prev
+{
+	font-size:30px;
+}
+.menu
+{
+	clear: both;
+	border-radius: 20px;
+	background-color: white;
+	border:1px solid grey;
+	margin-bottom: 5px;
 }

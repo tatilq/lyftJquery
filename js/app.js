@@ -11,6 +11,7 @@ function mostrar(posicion)
   var lati=posicion.coords.latitude;
   var longi=posicion.coords.longitude;
   initMap(lati,longi);
+  map.setCenter("");
 }
 //--------------------------------------FUNCION PARA GESTIONAR ALGUN TIPO DE ERROR------------------------------//
 function gestionarErrores(error)
