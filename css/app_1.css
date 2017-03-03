@@ -19,11 +19,21 @@
 {
 	margin-left:10px;
 }
+header .logo{
+    width: 40px;
+    display: inline-block;
+    color: white;
+}
+.img_face{
+    border-radius: 100%;
+    width: 40%;
+    border:1px solid rgba(0,0,0,0.2);;
+}
 .prev
 {
-	background-color: white;
+	background-color: transparent;
 	color: black;
-	padding: 10px;
+	padding:10px;
 	border-radius: 80px;
 	border: 1px solid black;
 	margin-bottom: 10px;
