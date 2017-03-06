@@ -1,28 +1,45 @@
+.carros .colu
+{
+	outline: 1px solid  #aaaaaa;
+}
+.cirles
+{
+	
+	padding:10px;
+}
+.cirles li
+{
+	padding:10px;
+	border-:1px;
+}
 /*ESTILOS DELA APP1*/
 .car img
 {
-	margin: 0 auto;
-	width: 200px;
+
+	width: 80%;
 }
-.tabla {
-    
-    background: #F3F3F5;
-    margin: 0 2%;
-    border-radius:20px;
-    border: solid 1px #aaaaaa;
-}
+
 .mastercard
 {
 	width: 10%;
 }
-.list
+.set
 {
-	margin-left:10px;
+	margin-top: 5px;
+}
+.personal
+{
+	background-color: white;
+}
+.tabla {
+    
+    background: #ECEBEB;
+    border: solid 1px #aaaaaa;
 }
 header .logo{
-    width: 40px;
+    width: 70px;
     display: inline-block;
-    color: white;
+    
 }
 .img_face{
     border-radius: 100%;
@@ -31,38 +48,34 @@ header .logo{
 }
 .prev
 {
-	background-color: transparent;
+	background-color: white;
 	color: black;
 	padding:10px;
-	border-radius: 80px;
-	border: 1px solid black;
+	border-radius: 100%;
+	border: 1px solid #aaaaaa;
 	margin-bottom: 10px;
 }
 #prev
 {
 	font-size:30px;
 }
-.menu
-{
-	clear: both;
-	border-radius: 20px;
-	background-color: white;
-	border:1px solid grey;
-	margin-bottom: 5px;
-}
+
 .menuDrop
 {
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
 	left: 0px;
-
 }
 .btn_map
 {
-	background-color: #431B83;
+	background-color: #EA0B8C;
 	color: white;
 	padding: 20px;
+	width: 100%;
+	border:none;
+	border-radius: 6px;
+	margin-bottom: 5px;
 }
 #map{
 	height: 100%;
@@ -70,4 +83,22 @@ header .logo{
 	position: absolute;
 	background-repeat:no-repeat;
 	clear: both;
+}
+.street
+{
+	padding: 8px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.street p
+{
+	padding: 2px;
+}
+.puntos
+{
+	padding: 8px;
+}
+.street .uno
+{
+	
+	border-bottom: 1px solid #aaaaaa;
 }

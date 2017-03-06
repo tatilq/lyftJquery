@@ -7,13 +7,19 @@
 	bottom: 0px;
 	right: 0px;
 	left: 0px;
+	width: 100%;
 
 }
 .btn_map
 {
 	background-color: #431B83;
 	color: white;
+	width: 100%;
 	padding: 20px;
+	border:none;
+	border-radius: 6px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 }
 .dIcon
 {
@@ -49,6 +55,13 @@
 	background-color:  #D7D7D9;
 	border: 2px solid: #EA0B8C;
 	color: blue !important;
+}
+.dropdown-menu .active{
+    background: #f3f3f5;
+
+}
+.azul{
+	color: #4e23bb;
 }
 .dropdown .btn-log
 {

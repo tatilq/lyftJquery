@@ -3,7 +3,7 @@ $(document).ready(init);
 function init()
 {
   $('.dropdown-menu').css({"position":"absolute" , "bottom":"100%" , "top":"initial"});
-  navigator.geolocation.watchPosition(mostrar, gestionarErrores);
+  navigator.geolocation.getCurrentPosition(centerMap);
 }
 //------------------------------ --------FUNCION QUE OBTINEN MI POSICION ACTUAL-----------------------------------//
 function mostrar(posicion)
@@ -11,7 +11,11 @@ function mostrar(posicion)
   var lati=posicion.coords.latitude;
   var longi=posicion.coords.longitude;
   initMap(lati,longi);
-  map.setCenter("");
+  //map.setCenter("");
+  /*$('#lista').on("click",".justificar",function()
+  {
+    console.log($(this));
+  });*/
 }
 //--------------------------------------FUNCION PARA GESTIONAR ALGUN TIPO DE ERROR------------------------------//
 function gestionarErrores(error)
