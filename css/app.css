@@ -1,5 +1,8 @@
 
-
+*
+{
+	outline: 1px solid red;
+}
 /*ESTILOS DELA APP*/
 .menuDrop
 {
@@ -8,7 +11,16 @@
 	right: 0px;
 	left: 0px;
 	width: 100%;
-
+}
+.logo
+{
+	width: 40px;
+	height: 40px;
+	margin:0 auto;
+}
+.shared
+{
+	margin-top: 5px;
 }
 .btn_map
 {
@@ -31,37 +43,8 @@
 }
 .dropdown-menu
 {
-	width: 70%;
+	width: 100%;
 	box-shadow: none;
-}
-.dropdown-menu  span
-{
-	position: absolute;
-	right: 10px;
-
-}
-.shared  span
-{
-	position: absolute;
-	right: 5px;
-}
-.dropdown-menu li
-{
-	padding: 5px;
-	font-size: 15px;
-}
-.dropdown-menu li:hover
-{
-	background-color:  #D7D7D9;
-	border: 2px solid: #EA0B8C;
-	color: blue !important;
-}
-.dropdown-menu .active{
-    background: #f3f3f5;
-
-}
-.azul{
-	color: #4e23bb;
 }
 .dropdown .btn-log
 {
@@ -79,13 +62,15 @@
 	font-size: 12px;
 	margin-top: -7px;
 }
-.shared
+.li .shared
 {
-	margin-left: 33px;	
-	font-size: 12px;
-	margin-top: -9px;
+	margin-top: -7px;
+	position: absolute;
 }
-
+.li span
+{
+	display: none;
+}
 #map{
 	height: 100%;
 	width: 100%;
