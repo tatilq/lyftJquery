@@ -1,76 +1,29 @@
-.carros .colu
-{
-	outline: 1px solid  #aaaaaa;
-}
-.cirles
-{
-	
-	padding:10px;
-}
-.cirles li
-{
-	padding:10px;
-	border-:1px;
-}
 /*ESTILOS DELA APP1*/
 .car img
 {
-
 	width: 80%;
 }
-
 .mastercard
 {
 	width: 10%;
-}
-.set
-{
-	margin-top: 5px;
-}
-.personal
-{
-	background-color: white;
-}
-.tabla {
-    
-    background: #ECEBEB;
-    border: solid 1px #aaaaaa;
-}
-header .logo{
-    width: 70px;
-    display: inline-block;
-    
 }
 .img_face{
     border-radius: 100%;
     width: 40%;
     border:1px solid rgba(0,0,0,0.2);;
 }
-.prev
-{
-	background-color: white;
-	color: black;
-	padding:10px;
-	border-radius: 100%;
-	border: 1px solid #aaaaaa;
-	margin-bottom: 10px;
-}
-#prev
-{
-	font-size:30px;
-}
-
 .menuDrop
 {
 	position: absolute;
 	bottom: 0px;
-	right: 0px;
-	left: 0px;
+	right:15px;
+	left: 15px;
 }
 .btn_map
 {
 	background-color: #EA0B8C;
 	color: white;
+    margin-top: 10px;
 	padding: 20px;
 	width: 100%;
 	border:none;
@@ -84,21 +37,69 @@ header .logo{
 	background-repeat:no-repeat;
 	clear: both;
 }
-.street
-{
-	padding: 8px;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+.result, .set_pickup{
+    position: absolute;
+    bottom: 100px;
+    right: 0px;
+    left:0px;
+    color: #000;
+    font-size: 15px;
 }
-.street p
-{
-	padding: 2px;
+.result small{
+    color: rgba(0,0,0,0.5);
 }
-.puntos
-{
-	padding: 8px;
+.car_description, .car_payment{
+    background: #f3f3f5;
+    border: 2px solid outset grey;
 }
-.street .uno
+/************ICONS--**********/
+.iconos
 {
-	
-	border-bottom: 1px solid #aaaaaa;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+#prev
+{
+    background-color: white;
+    padding: 20px;
+    color: black;
+    border-radius: 100%;
+    border: 1px outset #aaaaaa;
+}
+/************CAR-DESCRIPTION**********/
+.car_description img{
+    width: 100px;
+}
+.car_description{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+}
+.car_description ul{
+    margin: 10px;
+}
+.car_description strong{
+    font-size: 20px;
+}
+.car_description, .car_payment{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+/************CAR-PAYMENT**********/
+.car_payment .personal{
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+.credit_card{
+    width: 35px;
+}
+/************CAR-DIRECTION**********/
+.car_direction i{
+    font-size:10px;
+}
+.first_direction div{
+    padding: 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.car_direction{
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

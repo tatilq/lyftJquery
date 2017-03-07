@@ -19,17 +19,17 @@
 	</div>
 </div>
 
-<!--*************************PARTE DEL LYFT CAR***************************-->
+<!--************PARTE DEL LYFT CAR*******************-->
 <header>
        <div class="container">
             <div class="row">
                <div class="col-md-4 col-sm-4 col-xs-4">
                     <div class="photo_fb_map">
-                    <img src="img/perfil.jpg" class="img-responsive img_face" alt="">
+                      <img src="img/perfil.jpg" class="img-responsive img_face " alt="">
                     </div>  
                </div>
                <div class="col-md-4 col-sm-4 col-xs-4">
-                    <img src="img/logo_lyft.png" alt="" class="img-responsive logo pull-right">  
+                    <img src="img/logo_lyft.png" alt="" class="img-responsive logo text-center">  
                </div>
                <div class="col-md-4 col-sm-4 col-xs-4 text-center"> 
                     <div class="gift_map pull-right">
@@ -38,75 +38,68 @@
                </div>  
             </div>   
        </div>
-    </header>
+</header>
 
-    <section class="menuDrop">
-    <div class="container">
-    	<div class="row ">
-	                <div class="row ">
-	        <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-	            <a href="app.html"><i class="fa fa-arrow-left prev" id="prev" aria-hidden="true"></i></a>
-	        </div>
-	        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-	            <i class="fa fa-location-arrow prev" id="prev" aria-hidden="true"></i>
-	        </div>     
-	     </div>
-    </div>
-	    
-        <div class="container tabla">
 
-            <div class="row ">
-                <div class="col-xs-6 col-md-6 col-sm-6 car ">
-                    <img class="img-responsive pull-right" src="img/carLyft.png" alt="">         
-                </div>
-                <div class="col-xs-6 col-md-6 col-sm-6 text-left ">
-                    <h4>Lyft</h4>
-                    <small>Fast ride, 4 seats</small>
-                </div>
+<section class="menuDrop">
+    <div class="container-fluid text-center carros">
+        <div class="row iconos">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+              <a href="app.html"><i class="fa fa-arrow-left prev" id="prev" aria-hidden="true"></i></a>
             </div>
-            <div class="row carros" >
-	            <div class="col-md-6 col-sm-6 col-xs-6  colu">
-	                <ul class="list-unstyled ">
-                  		<li class="text-center">Personal</li>
-                   		<li class="text-center"><small>Payment</small></li>
-                	</ul>    
-            	</div>
-           		<div class="col-md-6 col-sm-6 col-xs-6 colu">
-	                <ul class="list-unstyled ">
-	                    <li class="text-center">$6-12</li>
-	                    <li class="text-center"><small>Price stimate</small></li>
-	                </ul>
-            	</div>    
-        	</div>
-            <div class="row  text-left personal">
-	            <div class="col-md-2 col-sm-2 col-xs-2 text-center">
-	               <ul class="list-unstyled puntos">
-	                    <li style="color: #431B83;"><i class="fa fa-circle"></i></li>
-	                    <li style="color: rgba(0,0,0,0.5);">|</li>
-	                    <li style="color: #EA0B8C;"><i class="fa fa-circle"></i></li>
-	                </ul>
-	            </div>
-	            <div class="col-md-10 col-sm-10 col-xs-10 street">
-	                <div class="uno"><p>2300 Harrison Street</p></div>
-	                <div><p>Caltrain Station</p></div>          
-	            </div>         
-        	</div>
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+              <i class="fa fa-location-arrow prev" id="prev" aria-hidden="true"></i>
+            </div>              
         </div>
-        <div class="container-table">
-			      <div class="row  text-center set">
-				      <div class="col-xs-12 col-sm-12 col-md-12 ">
-				      <a href="app_2.html"><button  class="btn_map">REQUEST LYFT</button></a>
-				    </div>
-			   </div> 
-    	</div>
-    </section>
-      
+        <div class="row car_description">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right car">
+                <img src="img/carLyft.png" alt="">    
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                <ul class="list-unstyled ">
+                    <li class=""><strong>Lyft</strong></li>
+                    <li><small>Fast ride, 4 seats</small></li>
+                </ul>
+            </div>        
+        </div>  
+        <div class="row car_payment">
+            <div class="col-md-6 col-sm-6 col-xs-6 personal">
+                <ul class="list-unstyled">
+                   <li><img src="img/mc.png" alt="" class="mastercard" >Personal</li>
+                   <li><small>Payment</small></li>
+                </ul>    
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <ul class="list-unstyled">
+                    <li id="priceEstimate">$6-12</li>
+                    <li><small>Price stimate</small></li>
+                </ul>
+            </div>    
+        </div> 
+        <div class="row car_direction text-left">
+            <div class="col-md-2 col-sm-2 col-xs-2 text-center">
+               <ul class="list-unstyled">
+                    <li style="color:indigo;"><i class="fa fa-circle"></i></li>
+                    <li style="color: rgba(0,0,0,0.5);">|</li>
+                    <li style="color:deeppink;"><i class="fa fa-circle"></i></li>
+                </ul>
+            </div>
+            <div class="col-md-10 col-sm-10 col-xs-10 first_direction">
+                <div>2300 Harrison Street</div>          
+                <div>Caltrain Station</div>          
+            </div>         
+        </div>     
+      </div>     
+    </div>
+    <a href="app_2.html"><button  class="btn_map">REQUEST LYFT</button></a>
+  </section>  
 <!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_dWJI0iTHSacVygR7yKybM8B_ZpHeovs&callback=init"
         async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     <script src="js/app.js" type="text/javascript"></script>
+     <script src="js/app_1.js" type="text/javascript"></script>
+     <script src="js/map.js" type="text/javascript"></script>
 <!--****************************************************FIN*******************************************-->
 </body>
 </html>
