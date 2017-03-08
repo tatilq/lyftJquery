@@ -4,18 +4,22 @@ function init()
 {
   solicitarEstimado();
 }
-
+/**/
 function solicitarEstimado()
 {
+  var type=localStorage.getItem('typeCar');
   $.ajax({
     url:'https://clientes.geekadvice.pe/api/carrera',
-    data: {tipo:'2'}
+    data: {tipo: type }
     }).done(function(_data)
     {
-      console.log(_data);
       update(_data);
+    }).fail(function(){
+        //poner swit alert
     });
+  //img/perfil.jpg
 }
+/**/
 function update(_info)
 {
   $('#face').attr({'src': _info.conductor.url});

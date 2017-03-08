@@ -1,26 +1,53 @@
 $(document).ready(init);
-//-------------------------------------------------------------------------//
+//---------------------------------Funcion que se ejecuta apenas se cargue la pagina----------------------------------------//
 function init()
-{
-
-  solicitarEstimado();
+{	if(validaLocalStorageName()||validaLocalStorageImage()||validaLocalStorageSeat())
+    {
+    	$('#car').attr({'src': 'img/carLyft.png'});
+		$('#nameCar').text('Lyft');
+		$('#fastSeat').text('Fast ride, 4 seats');
+    	$('#priceEstimate').text('$6-12');
+    }
+    else
+    {
+    	$('#car').attr({'src': localStorage.getItem('srcImgCar')});
+		$('#nameCar').text(localStorage.getItem('nameCar'));
+		$('#fastSeat').text(localStorage.getItem('seat'));
+		solicitarEstimado();
+    }
 }
-
+//---------------------------------Funcion que solicita el estimado segun el tipo----------------------------------------//
 function solicitarEstimado()
 {
 	var type=localStorage.getItem('typeCar');
-  $.ajax({
-    url:'https://clientes.geekadvice.pe/api/estimado',
-    data: {tipo:type}
+	console.log(type);
+  	$.ajax({
+   		url:'https://clientes.geekadvice.pe/api/estimado',
+    	data: {tipo:type}
     }).done(function(_data){
-        update(_data);
+        updatePriceStimate(_data);
+    }).fail(function(){
+        //poner swit alert
     });
 }
-function update(_info)
+//---------------------------------Funcion que Actualiza el estimado segun el tipo----------------------------------------//
+function updatePriceStimate(_info)
 {
-	$('#car').attr({'src': localStorage.getItem('srcImgCar')});
-	$('#nameCar').text(localStorage.getItem('nameCar'));
-	
-    $('#priceEstimate').text(_info.estimado.moneda+_info.estimado.min+'-'+_info.estimado.max);
+	return ($('#priceEstimate').text(_info.estimado.moneda+_info.estimado.min+'-'+_info.estimado.max));
+}
+/****************************Funcion que valida que el nameCar exista en mi LocalStorage***************************/
+function  validaLocalStorageName()
+{
+	return (localStorage.getItem('nameCar') == null);
+}
+/****************************Funcion que el 'src' de la imagen exista en mi LocalStorage***************************/
+function  validaLocalStorageImage()
+{
+	return(localStorage.getItem('srcImgCar') == null);
+}
+/****************************Funcion que el 'Seat' de carro exista en mi LocalStorage***************************/
+function  validaLocalStorageSeat()
+{
+	return(localStorage.getItem('seat') == null);
 }
 

@@ -16,8 +16,9 @@ function onLinkClick(evt)
 	var srcCar= $(evt.currentTarget).find('.logo').attr('src');//  $('.bandera').eq(0).attr('src');
 	var type= $(evt.currentTarget).find('.type').text();
 	var name= $(evt.currentTarget).find('.name').text();
+	var seats = $(evt.currentTarget).find('.seats').text();
 	localStorage.setItem('srcImgCar',srcCar);
 	localStorage.setItem('nameCar',name);
 	localStorage.setItem('typeCar',type);
-	
+	localStorage.setItem('seat',seats);
 }

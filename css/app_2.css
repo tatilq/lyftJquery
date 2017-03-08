@@ -1,11 +1,10 @@
-
-/*ESTILOS DELA APP2*/
+/*Parte del header*/
 header{
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 header .lyft
 {
-	margin-top: 15px;
+    margin-top: 15px;
 
 }
 header .logo{
@@ -13,16 +12,26 @@ header .logo{
     display: inline-block;
     color: white;
 }
-.img_face{
+/**Parte de la foto del conductor */
+#face
+{
+    width: 200px;
+    height: 200px;
+    margin:0 auto;
     border-radius: 100%;
-    width: 40%;
-    margin: auto;
     padding: 10px;
-    border:1px solid rgba(0,0,0,0.2);;
+    border: 1px outset #aaaaaa;
 }
-.content_photo{
-    padding: 50px;
+#name
+{
+    font-weight: bold;
+    font-size: 20px;
 }
+.driver-info
+{
+    margin: 20px 0px;
+}
+/**/
 .price{
     font-size: 30px;
     margin-top: 60px;
@@ -35,26 +44,22 @@ header .logo{
     background-color: #EA0B8C;
     color:#fff;
 }
-.self_info{
-    margin: 0  10px; 
-}
-#next
+/**/
+section .btn_log
 {
-	
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
+    width: 100%;
+    padding: 15px 10px; 
+    background-color: #474c62;
+    color: white;
+    border:none;
+    font-size: 20px;
 }
-#btn_next
+.next
 {
-	padding: 10px;
-	width: 100%;
-	border-top: 0px;
-	padding: 10px; 
-	background-color: #474c62;
-	color: white;
-	border:none;
-	border-radius: 5px;
-	font-size: 30px;
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    left: 0px;
+    background-color: #474c62;
+    margin-bottom: 10px;
 }

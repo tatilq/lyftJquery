@@ -1,7 +1,7 @@
 /*ESTILOS DELA APP1*/
-.car img
+.car_description #car
 {
-	width: 80%;
+	width: 200px;
 }
 .mastercard
 {
@@ -67,9 +67,6 @@
     border: 1px outset #aaaaaa;
 }
 /************CAR-DESCRIPTION**********/
-.car_description img{
-    width: 100px;
-}
 .car_description{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; 
@@ -77,8 +74,9 @@
 .car_description ul{
     margin: 10px;
 }
-.car_description strong{
-    font-size: 20px;
+.car_description #nameCar{
+    font-weight: bold;
+    font-size: 17px;
 }
 .car_description, .car_payment{
     border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -86,9 +84,6 @@
 /************CAR-PAYMENT**********/
 .car_payment .personal{
     border-right: 1px solid rgba(0,0,0,0.1);
-}
-.credit_card{
-    width: 35px;
 }
 /************CAR-DIRECTION**********/
 .car_direction i{
