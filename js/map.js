@@ -1,5 +1,6 @@
-
+/**********************************************Variable Map Global************************************/
 var map;
+/**********************************FUNCION QUE SE EJECUTA CUANDO TERMINE DE CARGAR EL DOCUMENTO***********/
 $(document).ready(init);
 function init()
 {
@@ -12,6 +13,7 @@ function init()
         console.log('Navigation NOT supported');
     }
 }
+/*********************************************FUNCION INICIA EL MAPA***********************************/
 function initMap() {
 
   map= new google.maps.Map(document.getElementById('map'), {
@@ -38,7 +40,7 @@ function initMap() {
       map.setCenter(place.geometry.location);
       map.setZoom(17);
     }
-//'Place ID: ' + place.place_id 
+    //'Place ID: ' + place.place_id 
     marker.setPlace({placeId: place.place_id, location: place.geometry.location});
     marker.setVisible(true);
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '<br>' +
@@ -48,12 +50,14 @@ function initMap() {
   });
   
 }
+/********************FUNCION GUARDA LA DIRECCION DE DESTINO LOCALEMNTE*********************************/
 function storageDirection(direccion)
 {
   localStorage.setItem('direccion',direccion);
   var direccion=localStorage.getItem('direccion');
   $('#direccion').text(direccion);
 }
+/*********************************************FUNCION QUE CENTRA EL MAPA***********************************/
 function centrarMapa(position){
     map.setZoom(16);
     map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
@@ -84,3 +88,4 @@ function centrarMapa(position){
 
     
 };
+/**************************************************FIN*****************************************/

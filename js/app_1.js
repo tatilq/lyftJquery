@@ -21,7 +21,7 @@ function init()
 function solicitarEstimado()
 {
 	var type=localStorage.getItem('typeCar');
-    var url='https://clientes.geekadvice.pe/api/estimado?';
+    var url='https://clientes.geekadvice.pe/api/estimado';
 	console.log(type);
   	$.ajax({
    		url:url,

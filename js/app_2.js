@@ -1,3 +1,4 @@
+/**********************************FUNCION QUE SE EJECUTA CUANDO TERMINE DE CARGAR EL DOCUMENTO***********/
 $(document).ready(init);
 //-----------------------FUNCION QUE OBTIENE TU POSICION ACTUAL------------------//
 function init()
