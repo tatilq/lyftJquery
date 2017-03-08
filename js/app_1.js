@@ -28,14 +28,12 @@ function solicitarEstimado()
         data:{"tipo":type}
     }).done(function(_data){
         updatePriceStimate(_data);
-        console.log(url);
-    }).fail(function(){
-        alert('Algo fallo');
     });
 }
 //---------------------------------Funcion que Actualiza el estimado segun el tipo----------------------------------------//
 function updatePriceStimate(_info)
 {
+    console.log(_info.final);
     localStorage.setItem('min',_info.estimado.min);
     localStorage.setItem('max',_info.estimado.max);
 	return ($('#priceEstimate').text(_info.estimado.moneda+_info.estimado.min+'-'+_info.estimado.max));

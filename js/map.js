@@ -4,21 +4,17 @@ var map;
 $(document).ready(init);
 function init()
 {
-    if(navigator.geolocation){
+   
         console.log('Navigation supported');
         navigator.geolocation.getCurrentPosition(centrarMapa);
-    }
-    else
-    {
-        console.log('Navigation NOT supported');
-    }
+    
 }
 /*********************************************FUNCION INICIA EL MAPA***********************************/
 function initMap() {
 
   map= new google.maps.Map(document.getElementById('map'), {
     center: {lat: -16.457389199999998, lng: -71.5315308},
-    zoom: 13
+    zoom: 14
   });
 
   var input = document.getElementById('pac-input');

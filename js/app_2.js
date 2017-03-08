@@ -3,6 +3,7 @@ $(document).ready(init);
 //-----------------------FUNCION QUE OBTIENE TU POSICION ACTUAL------------------//
 function init()
 {
+  
   solicitarEstimado();
 }
 //----------------Funcion que solicita el estimado segun el min y max-----------------//
@@ -17,8 +18,6 @@ function solicitarEstimado()
   }).done(function(_data)
   {
     update(_data);
-  }).fail(function(){
-    alert("Algo fallo")
   });
 }
 /**************************FUNCION PARA ACTUALIZAR LA IMAGEN DEL CONDUCTOR SEGUN EL TIPO**************/
