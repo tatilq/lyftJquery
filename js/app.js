@@ -44,8 +44,8 @@ function setPickup()
 	else
 	{
 		swal({
-		  title: "¡Selecciona el Vehiculo de destino!",
-		  text: "No deleccionaste ningun vehiculo",
+		  title: "¡Por favor, selecciona un vehículo!",
+		  text: "No seleccionaste ningun vehiculo",
 		  imageUrl: "img/deslikes.png"
 		});
 	}

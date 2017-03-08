@@ -13,6 +13,7 @@ function init()
     	$('#car').attr({'src': localStorage.getItem('srcImgCar')});
 		$('#nameCar').text(localStorage.getItem('nameCar'));
 		$('#fastSeat').text(localStorage.getItem('seat'));
+        $('#dirSelect').text(localStorage.getItem('direccion'));
 		solicitarEstimado();
     }
 }
