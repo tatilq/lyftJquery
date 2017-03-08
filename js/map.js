@@ -14,7 +14,7 @@ function initMap() {
 
   map= new google.maps.Map(document.getElementById('map'), {
     center: {lat: -16.457389199999998, lng: -71.5315308},
-    zoom: 14
+    zoom: 16
   });
 
   var input = document.getElementById('pac-input');
@@ -34,7 +34,7 @@ function initMap() {
       map.fitBounds(place.geometry.viewport);
     } else {
       map.setCenter(place.geometry.location);
-      map.setZoom(17);
+      map.setZoom(16);
     }
     //'Place ID: ' + place.place_id 
     marker.setPlace({placeId: place.place_id, location: place.geometry.location});
