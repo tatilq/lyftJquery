@@ -4,9 +4,8 @@ var map;
 $(document).ready(init);
 function init()
 {
-   
-        console.log('Navigation supported');
-        navigator.geolocation.getCurrentPosition(centrarMapa);
+  console.log('Navigation supported');
+  navigator.geolocation.getCurrentPosition(centrarMapa);
     
 }
 /*********************************************FUNCION INICIA EL MAPA***********************************/
@@ -53,11 +52,28 @@ function storageDirection(direccion)
   var direccion=localStorage.getItem('direccion');
   $('#direccion').text(direccion);
 }
+/********************FUNCION GUARDA LA DIRECCION DE DESTINO LOCALEMNTE*********************************/
+function geocodeLatLng(geocoder, position, id) {
+
+  var latlng = position;
+  geocoder.geocode({'location': latlng}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      if (results[0]) {
+        $('#'+id).html(results[0].formatted_address);
+        miubicacion= results[0].formatted_address;
+      } else {
+        window.alert('No results found');
+      }
+    } else {
+      window.alert('Geocoder failed due to: ' + status);
+    }
+  });
+}
 /*********************************************FUNCION QUE CENTRA EL MAPA***********************************/
 function centrarMapa(position){
     map.setZoom(16);
     map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
-    currentMarker = new google.maps.Marker({
+    var currentMarker = new google.maps.Marker({
         position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
         map: map,
         title:"¡ Aqui estoy !",
@@ -82,6 +98,7 @@ function centrarMapa(position){
         icon: "img/car.png"
     });
 
-    
+    var geocoder = new google.maps.Geocoder;
+    geocodeLatLng(geocoder, currentMarker.position,'dirActual');
 };
 /**************************************************FIN*****************************************/
