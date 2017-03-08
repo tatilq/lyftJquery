@@ -20,19 +20,23 @@ function init()
 function solicitarEstimado()
 {
 	var type=localStorage.getItem('typeCar');
+    var url='https://clientes.geekadvice.pe/api/estimado?';
 	console.log(type);
   	$.ajax({
-   		url:'https://clientes.geekadvice.pe/api/estimado',
-    	data: {tipo:type}
+   		url:url,
+        data:{"tipo":type}
     }).done(function(_data){
         updatePriceStimate(_data);
+        console.log(url);
     }).fail(function(){
-        //poner swit alert
+        alert('Algo fallo');
     });
 }
 //---------------------------------Funcion que Actualiza el estimado segun el tipo----------------------------------------//
 function updatePriceStimate(_info)
 {
+    localStorage.setItem('min',_info.estimado.min);
+    localStorage.setItem('max',_info.estimado.max);
 	return ($('#priceEstimate').text(_info.estimado.moneda+_info.estimado.min+'-'+_info.estimado.max));
 }
 /****************************Funcion que valida que el nameCar exista en mi LocalStorage***************************/
