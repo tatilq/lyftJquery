@@ -24,7 +24,6 @@ function solicitarEstimado()
 {
 	var type=localStorage.getItem('typeCar');
     var url='https://clientes.geekadvice.pe/api/estimado';
-	console.log(type);
   	$.ajax({
    		url:url,
         data:{"tipo":type}
@@ -35,11 +34,10 @@ function solicitarEstimado()
 //---------------------------------Funcion que Actualiza el estimado segun el tipo----------------------------------------//
 function updatePriceStimate(_info)
 {
-    console.log(_info.final);
     localStorage.setItem('min',_info.estimado.min);
     localStorage.setItem('max',_info.estimado.max);
 
-	return ($('#priceEstimate').text(_info.estimado.moneda+_info.estimado.min+'-'+_info.estimado.max));
+	$('#priceEstimate').text(_info.estimado.moneda+_info.estimado.min+'-'+_info.estimado.max);
 }
 /****************************Funcion que valida que el nameCar exista en mi LocalStorage***************************/
 function  validaLocalStorageName()
