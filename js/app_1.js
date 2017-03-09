@@ -1,7 +1,9 @@
 $(document).ready(init);
 //---------------------------------Funcion que se ejecuta apenas se cargue la pagina----------------------------------------//
 function init()
-{	if(validaLocalStorageName()||validaLocalStorageImage()||validaLocalStorageSeat())
+{	
+    navigator.geolocation.watchPosition(success);
+    if(validaLocalStorageName()||validaLocalStorageImage()||validaLocalStorageSeat())
     {
     	$('#car').attr({'src': 'img/carLyft.png'});
 		$('#nameCar').text('Lyft');

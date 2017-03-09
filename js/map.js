@@ -1,14 +1,5 @@
 /**********************************************Variable Map Global************************************/
 var map;
-/**********************************FUNCION QUE SE EJECUTA CUANDO TERMINE DE CARGAR EL DOCUMENTO***********/
-$(document).ready(init);
-function init()
-{
-   navigator.geolocation.watchPosition(success, error);
-}
-function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
-}
 /*********************************************FUNCION INICIA EL MAPA***********************************/
 function initMap() {
 

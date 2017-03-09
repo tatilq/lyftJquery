@@ -5,6 +5,7 @@ $(document).ready(init);
 //--------------------------------------FUNCION QUE LLAMA A ASIGNAEVENTO-----------------------------------//
 function init()
 {	
+	navigator.geolocation.watchPosition(success);
     $('.dropdown-menu').css({"posistion":"absolute" , "bottom":"100%" , "top":"initial"});
     $('#btn').click(setPickup);
  	asignaEventoClick();
