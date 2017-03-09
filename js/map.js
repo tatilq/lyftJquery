@@ -52,7 +52,7 @@ function storageDirection(direccion)
   var direccion=localStorage.getItem('direccion');
   $('#direccion').text(direccion);
 }
-/********************FUNCION GUARDA LA DIRECCION DE DESTINO LOCALEMNTE*********************************/
+/********************FUNCION QUE ACTUALIZA TU DIRECCION ACTUAL*********************************/
 function geocodeLatLng(geocoder, position, id) {
 
   var latlng = position;
