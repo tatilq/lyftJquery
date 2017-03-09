@@ -4,9 +4,10 @@ var map;
 $(document).ready(init);
 function init()
 {
-  console.log('Navigation supported');
-  navigator.geolocation.getCurrentPosition(centrarMapa);
-    
+   navigator.geolocation.watchPosition(success, error);
+}
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
 }
 /*********************************************FUNCION INICIA EL MAPA***********************************/
 function initMap() {
@@ -70,7 +71,7 @@ function geocodeLatLng(geocoder, position, id) {
   });
 }
 /*********************************************FUNCION QUE CENTRA EL MAPA***********************************/
-function centrarMapa(position){
+function success(position){
     map.setZoom(16);
     map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
     var currentMarker = new google.maps.Marker({
