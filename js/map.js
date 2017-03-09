@@ -27,6 +27,7 @@ function initMap() {
       map.setCenter(place.geometry.location);
       map.setZoom(16);
     }
+  
     marker.setPlace({placeId: place.place_id, location: place.geometry.location});
     marker.setVisible(true);
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '<br>' +
@@ -45,7 +46,6 @@ function storageDirection(direccion)
 }
 /*********************************************FUNCION QUE CENTRA EL MAPA***********************************/
 function success(position){
-    map.setZoom(16);
     map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
     var currentMarker = new google.maps.Marker({
         position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),

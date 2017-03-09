@@ -28,7 +28,6 @@ function geocodeLatLng(geocoder, position, id) {
 }
 /*********************************************FUNCION QUE CENTRA EL MAPA***********************************/
 function success(position){
-    map.setZoom(16);
     map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
     var currentMarker = new google.maps.Marker({
         position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
