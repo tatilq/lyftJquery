@@ -72,19 +72,19 @@ function success(position){
         icon: "img/persona.png"
     });
      var marker1 = new google.maps.Marker({
-        position: new google.maps.LatLng(position.coords.latitude+0.002, position.coords.longitude),
+        position: new google.maps.LatLng(position.coords.latitude+0.001, position.coords.longitude),
         map: map,
         title:"auto1",
         icon: "img/car.png"
     });
      var marker2 = new google.maps.Marker({
-        position: new google.maps.LatLng(position.coords.latitude+0.005, position.coords.longitude),
+        position: new google.maps.LatLng(position.coords.latitude+0.004, position.coords.longitude),
         map: map,
         title:"auto2",
         icon: "img/car.png"
     });
       var marker3 = new google.maps.Marker({
-        position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude+0.005),
+        position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude+0.004),
         map: map,
         title:"auto3",
         icon: "img/car.png"
