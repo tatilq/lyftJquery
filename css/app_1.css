@@ -8,6 +8,14 @@ display: none;
 {
 	width: 200px;
 }
+.car_direction, li
+{
+    margin-top: 5px;
+}
+#dirSelect ,#dirActual
+{
+    padding-left: 5px;
+}
 .mastercard
 {
 	width: 10%;

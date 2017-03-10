@@ -2,7 +2,7 @@ $(document).ready(init);
 //---------------------------------Funcion que se ejecuta apenas se cargue la pagina----------------------------------------//
 function init()
 {	
-    navigator.geolocation.watchPosition(success);
+    
     if(validaLocalStorageName()||validaLocalStorageImage()||validaLocalStorageSeat())
     {
     	$('#car').attr({'src': 'img/carLyft.png'});
@@ -54,4 +54,6 @@ function  validaLocalStorageSeat()
 {
 	return(localStorage.getItem('seat') == null);
 }
+/*********************************************************FIN****************************************************/
+
 
