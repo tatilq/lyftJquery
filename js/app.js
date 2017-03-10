@@ -2,12 +2,33 @@
 var select=false;
 /**********************************FUNCION QUE SE EJECUTA CUANDO TERMINE DE CARGAR EL DOCUMENTO***********/
 $(document).ready(init);
-//--------------------------------------FUNCION QUE LLAMA A ASIGNAEVENTO-----------------------------------//
+//--------------------------------------FUNCION QUE LLAMA A ASIGNA EVENTO-----------------------------------//
 function init()
 {	
     $('.dropdown-menu').css({"posistion":"absolute" , "bottom":"100%" , "top":"initial"});
     $('#btn').click(setPickup);
- 	asignaEventoClick();
+ 	/******CREANDO CARRITOS DINAMICAMENTE******/
+ 	var carList = $('#list_cars');
+    var carros = $.parseJSON(cars);
+    $.each(carros, function() 
+    {
+      	var html= '<div class="row li" >'+
+					    '<div class="col-md-3 col-sm-3 col-xs-3">'+
+					    	'<img src="'+this['image']+'" class="logo">'+
+					  	'</div>'+
+					    '<div class="col-md-7 col-sm-7 col-xs-7">'+
+					    	'<p class="name">'+this['nombre']+'</p ><span class="type">'+this['type']+'</span>'+
+					    	'<small class="shared seats">'+this['description']+'</small>'+
+					    '</div>'+
+					    '<div class="col-md-2  col-sm-2 col-xs-2">'+
+					    	'<p >'+this['time']+'</p>'+
+					    	'<small class="shared">min</small>'+
+					    '</div>'+
+					'</div>';
+    carList.append(html);
+  	
+  	});
+   	asignaEventoClick();
 }
 function asignaEventoClick()
 {

@@ -28,8 +28,9 @@ function geocodeLatLng(geocoder, position, id) {
   });
 }
 /*********************************************FUNCION QUE CENTRA EL MAPA***********************************/
-function mapa(position){
-    
+function mapa(position)
+{
+  var geocoder = new google.maps.Geocoder;
   var container= document.getElementById('map');
   var latitud= position.coords.latitude;
   var longitud= position.coords.longitude;  
@@ -63,7 +64,6 @@ function mapa(position){
       icon: "img/car.png"
     });
 
-  var geocoder = new google.maps.Geocoder;
   geocodeLatLng(geocoder, currentMarker.position,'dirActual');
 };
 /**************************************************FIN*****************************************/

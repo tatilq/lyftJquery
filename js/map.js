@@ -6,7 +6,7 @@ function initMap() {
 /*********************************************FUNCION SE EJECUTA DE HABER ERRORES EN EL MAPA***********************************/
 function error(errorC)
 {
-    alert('Error: '+errorC.code+' '+error.message+ '\n\Please prove if are connected '+
+  alert('Error: '+errorC.code+' '+error.message+ '\n\Please prove if are connected '+
   'or permit your location');
     
 }

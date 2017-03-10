@@ -44,7 +44,6 @@ function validaLongitud()
 	var salida=$('#salida');
 	var numero=$('#numero').val();
 	var isValid=false;
-	console.log($('html').parent());
 	if(isNumberPhone(numero))
 	{	
 		if(numero.length<9 || numero.length>9  )
